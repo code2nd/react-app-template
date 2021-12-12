@@ -13,7 +13,7 @@ module.exports = {
         pathRewrite: {
           "^/api": "",
         },
-        secure: false, // 默认情况下，将不接受在 HTTPS 上运行且证书无效的后端服务器
+        secure: false,
       },
     },
     historyApiFallback: true,

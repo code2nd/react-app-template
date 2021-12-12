@@ -18,8 +18,6 @@ const commonConfig = (isProduction) => {
     : "style-loader";
 
   return {
-    // context: base directory 默认是当前app的根目录,
-    // entry写上相对路径时，并不是相对于文件所在的路径，而是相对于context配置的路径
     entry: "./src/index.js",
     output: {
       path: resolveApp("./build"),
@@ -35,19 +33,15 @@ const commonConfig = (isProduction) => {
       },
     },
     optimization: {
-      chunkIds: "deterministic", // natural: 使用自然数(不推荐) named: 使用包所在目录作为name(在开发环境推荐) deterministic: 生成id，针对相同文件生成的id是不变的
+      chunkIds: "deterministic",
       // tree shaking
       usedExports: true,
       // 代码分割
       splitChunks: {
-        chunks: "all", // async - 异步导入的代码做分离  initial -- 同步导入的代码做分离  all -- 同步异步导入的都做分离
-        /*  minSize: 200000, // 最小尺寸如果拆分出来一个包，那么拆分出来的这个包的大小最小为minSize
-        maxSize: 200000, // 将大于maxSize的包拆分成不小于minSize的包
-        minChunks: 1, // 引入的包至少被导入了几次才拆分 */
+        chunks: "all",
         cacheGroups: {
           commons: {
             test: /[\\/]node_modules[\\/]/,
-            // name: "vendors",
             filename: "static/js/[id].[contenthash:8].venders.js",
             chunks: "all",
           },
@@ -55,7 +49,6 @@ const commonConfig = (isProduction) => {
       },
       // true/multiple single
       runtimeChunk: {
-        // 这个name会放到output.filename里的name占位符里面
         name: (entrypoint) => `runtime-${entrypoint.name}`,
       },
     },

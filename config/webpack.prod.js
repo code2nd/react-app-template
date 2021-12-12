@@ -15,10 +15,6 @@ module.exports = {
           compress: {
             arguments: true,
           },
-          mangle: true,
-          toplevel: true,
-          keep_classnames: true, // 保留class名
-          keep_fnames: false, // 保留函数名
         },
       }),
       new CssMinimizerPlugin(),
