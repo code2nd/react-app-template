@@ -1,6 +1,8 @@
 # react-app-template
 React based basic template application
 
+此仓库为 [create-new-app-cli](https://github.com/code2nd/create-new-app-cli) 脚手架下载的项目模板仓库
+
 当前创建的项目已经默认配置了如下信息：
 
 + 从0到1使用 webpack 实现的项目打包配置信息
@@ -15,19 +17,13 @@ React based basic template application
 
 
 
-*> demo 运行成功后的三个页面：*
-
-*>*
-
-*> page-a：通过react-redux，redux-thunk管理的请求的测试数据展示列表*
-
-*>*
-
-*> page-b：测试对于prefetch预获取的模块打包*
-
-*>*
-
-*> page-c：测试媒体文件的打包*
+> demo 运行成功后的三个页面：
+>
+> page-a：通过react-redux，redux-thunk管理的请求的测试数据展示列表
+>
+> page-b：测试对于prefetch预获取的模块打包
+>
+> page-c：测试媒体文件的打包*
 
  页面截图：
 
