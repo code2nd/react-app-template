@@ -22,7 +22,7 @@ const PageA = () => {
   return (
     <>
       <Title level={1} style={{ textAlign: "center" }}>
-        欢迎使用 react-app-webpack 创建项目！
+        欢迎使用 create-new-app-cli 创建项目！
       </Title>
       <SongList handleChagePage={handleChagePage} />
     </>
